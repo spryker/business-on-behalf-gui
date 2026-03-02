@@ -26,51 +26,26 @@ class BusinessOnBehalfGuiToCompanyUserFacadeBridge implements BusinessOnBehalfGu
         $this->companyUserFacade = $companyUserFacade;
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\CustomerTransfer $customerTransfer
-     *
-     * @return int
-     */
     public function countActiveCompanyUsersByIdCustomer(CustomerTransfer $customerTransfer): int
     {
         return $this->companyUserFacade->countActiveCompanyUsersByIdCustomer($customerTransfer);
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\CompanyUserTransfer $companyUserTransfer
-     *
-     * @return \Generated\Shared\Transfer\CompanyUserResponseTransfer
-     */
     public function deleteCompanyUser(CompanyUserTransfer $companyUserTransfer): CompanyUserResponseTransfer
     {
         return $this->companyUserFacade->deleteCompanyUser($companyUserTransfer);
     }
 
-    /**
-     * @param int $idCompanyUser
-     *
-     * @return \Generated\Shared\Transfer\CompanyUserTransfer
-     */
     public function getCompanyUserById(int $idCompanyUser): CompanyUserTransfer
     {
         return $this->companyUserFacade->getCompanyUserById($idCompanyUser);
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\CompanyUserTransfer $companyUserTransfer
-     *
-     * @return \Generated\Shared\Transfer\CompanyUserResponseTransfer
-     */
     public function create(CompanyUserTransfer $companyUserTransfer): CompanyUserResponseTransfer
     {
         return $this->companyUserFacade->create($companyUserTransfer);
     }
 
-    /**
-     * @param int $idCompanyUser
-     *
-     * @return \Generated\Shared\Transfer\CompanyUserTransfer|null
-     */
     public function findCompanyUserById(int $idCompanyUser): ?CompanyUserTransfer
     {
         return $this->companyUserFacade->findCompanyUserById($idCompanyUser);

@@ -35,9 +35,6 @@ class CustomerTableButtonCreator extends AbstractButtonCreator implements Custom
      */
     protected $companyUserFacade;
 
-    /**
-     * @param \Spryker\Zed\BusinessOnBehalfGui\Dependency\Facade\BusinessOnBehalfGuiToCompanyUserFacadeInterface $companyUserFacade
-     */
     public function __construct(
         BusinessOnBehalfGuiToCompanyUserFacadeInterface $companyUserFacade
     ) {
@@ -65,11 +62,6 @@ class CustomerTableButtonCreator extends AbstractButtonCreator implements Custom
         return $buttonTransfers;
     }
 
-    /**
-     * @param int $idCustomer
-     *
-     * @return \Generated\Shared\Transfer\ButtonTransfer
-     */
     protected function buildAttachCustomerToCompanyButton(int $idCustomer): ButtonTransfer
     {
         $defaultOptions = [

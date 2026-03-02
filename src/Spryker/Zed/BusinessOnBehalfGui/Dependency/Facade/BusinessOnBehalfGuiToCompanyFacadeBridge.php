@@ -24,21 +24,11 @@ class BusinessOnBehalfGuiToCompanyFacadeBridge implements BusinessOnBehalfGuiToC
         $this->companyFacade = $companyFacade;
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\CompanyTransfer $companyTransfer
-     *
-     * @return \Generated\Shared\Transfer\CompanyTransfer
-     */
     public function getCompanyById(CompanyTransfer $companyTransfer): CompanyTransfer
     {
         return $this->companyFacade->getCompanyById($companyTransfer);
     }
 
-    /**
-     * @param int $idCompany
-     *
-     * @return \Generated\Shared\Transfer\CompanyTransfer|null
-     */
     public function findCompanyById(int $idCompany): ?CompanyTransfer
     {
         return $this->companyFacade->findCompanyById($idCompany);

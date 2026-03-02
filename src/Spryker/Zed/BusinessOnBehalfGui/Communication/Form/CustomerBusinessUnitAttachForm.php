@@ -25,19 +25,11 @@ class CustomerBusinessUnitAttachForm extends AbstractType
      */
     protected const FIELD_FK_COMPANY_BUSINESS_UNIT = 'fk_company_business_unit';
 
-    /**
-     * @return string
-     */
     public function getBlockPrefix(): string
     {
         return 'customer_business_unit_attach';
     }
 
-    /**
-     * @param \Symfony\Component\OptionsResolver\OptionsResolver $resolver
-     *
-     * @return void
-     */
     public function configureOptions(OptionsResolver $resolver): void
     {
         parent::configureOptions($resolver);

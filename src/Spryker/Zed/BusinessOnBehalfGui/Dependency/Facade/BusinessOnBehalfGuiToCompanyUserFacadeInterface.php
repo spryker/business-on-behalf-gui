@@ -13,38 +13,13 @@ use Generated\Shared\Transfer\CustomerTransfer;
 
 interface BusinessOnBehalfGuiToCompanyUserFacadeInterface
 {
-    /**
-     * @param \Generated\Shared\Transfer\CustomerTransfer $customerTransfer
-     *
-     * @return int
-     */
     public function countActiveCompanyUsersByIdCustomer(CustomerTransfer $customerTransfer): int;
 
-    /**
-     * @param \Generated\Shared\Transfer\CompanyUserTransfer $companyUserTransfer
-     *
-     * @return \Generated\Shared\Transfer\CompanyUserResponseTransfer
-     */
     public function deleteCompanyUser(CompanyUserTransfer $companyUserTransfer): CompanyUserResponseTransfer;
 
-    /**
-     * @param int $idCompanyUser
-     *
-     * @return \Generated\Shared\Transfer\CompanyUserTransfer
-     */
     public function getCompanyUserById(int $idCompanyUser): CompanyUserTransfer;
 
-    /**
-     * @param \Generated\Shared\Transfer\CompanyUserTransfer $companyUserTransfer
-     *
-     * @return \Generated\Shared\Transfer\CompanyUserResponseTransfer
-     */
     public function create(CompanyUserTransfer $companyUserTransfer): CompanyUserResponseTransfer;
 
-    /**
-     * @param int $idCompanyUser
-     *
-     * @return \Generated\Shared\Transfer\CompanyUserTransfer|null
-     */
     public function findCompanyUserById(int $idCompanyUser): ?CompanyUserTransfer;
 }

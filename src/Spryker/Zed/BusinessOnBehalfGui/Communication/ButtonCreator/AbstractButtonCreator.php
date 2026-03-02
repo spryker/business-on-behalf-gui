@@ -29,12 +29,6 @@ abstract class AbstractButtonCreator
             ->setCustomOptions($customOptions);
     }
 
-    /**
-     * @param string $url
-     * @param array $queryParams
-     *
-     * @return string
-     */
     protected function generateUrl(string $url, array $queryParams): string
     {
         return Url::generate($url, $queryParams);

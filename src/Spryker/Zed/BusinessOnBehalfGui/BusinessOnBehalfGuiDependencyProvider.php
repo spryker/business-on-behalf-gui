@@ -44,11 +44,6 @@ class BusinessOnBehalfGuiDependencyProvider extends AbstractBundleDependencyProv
      */
     public const PLUGINS_CUSTOMER_BUSINESS_UNIT_ATTACH_FORM_EXPANDER = 'PLUGINS_CUSTOMER_BUSINESS_UNIT_ATTACH_FORM_EXPANDER';
 
-    /**
-     * @param \Spryker\Zed\Kernel\Container $container
-     *
-     * @return \Spryker\Zed\Kernel\Container
-     */
     public function provideCommunicationLayerDependencies(Container $container): Container
     {
         $container = parent::provideCommunicationLayerDependencies($container);
@@ -62,11 +57,6 @@ class BusinessOnBehalfGuiDependencyProvider extends AbstractBundleDependencyProv
         return $container;
     }
 
-    /**
-     * @param \Spryker\Zed\Kernel\Container $container
-     *
-     * @return \Spryker\Zed\Kernel\Container
-     */
     protected function addCompanyFacade(Container $container): Container
     {
         $container->set(static::FACADE_COMPANY, function (Container $container) {
@@ -78,11 +68,6 @@ class BusinessOnBehalfGuiDependencyProvider extends AbstractBundleDependencyProv
         return $container;
     }
 
-    /**
-     * @param \Spryker\Zed\Kernel\Container $container
-     *
-     * @return \Spryker\Zed\Kernel\Container
-     */
     protected function addCustomerFacade(Container $container): Container
     {
         $container->set(static::FACADE_CUSTOMER, function (Container $container) {
@@ -94,11 +79,6 @@ class BusinessOnBehalfGuiDependencyProvider extends AbstractBundleDependencyProv
         return $container;
     }
 
-    /**
-     * @param \Spryker\Zed\Kernel\Container $container
-     *
-     * @return \Spryker\Zed\Kernel\Container
-     */
     protected function addCompanyUserFacade(Container $container): Container
     {
         $container->set(static::FACADE_COMPANY_USER, function (Container $container) {
@@ -110,11 +90,6 @@ class BusinessOnBehalfGuiDependencyProvider extends AbstractBundleDependencyProv
         return $container;
     }
 
-    /**
-     * @param \Spryker\Zed\Kernel\Container $container
-     *
-     * @return \Spryker\Zed\Kernel\Container
-     */
     protected function addCompanyBusinessUnitFacade(Container $container): Container
     {
         $container->set(static::FACADE_COMPANY_BUSINESS_UNIT, function (Container $container) {
@@ -126,11 +101,6 @@ class BusinessOnBehalfGuiDependencyProvider extends AbstractBundleDependencyProv
         return $container;
     }
 
-    /**
-     * @param \Spryker\Zed\Kernel\Container $container
-     *
-     * @return \Spryker\Zed\Kernel\Container
-     */
     protected function addCustomerBusinessUnitAttachFormExpanderPlugins(Container $container): Container
     {
         $container->set(static::PLUGINS_CUSTOMER_BUSINESS_UNIT_ATTACH_FORM_EXPANDER, function (Container $container) {

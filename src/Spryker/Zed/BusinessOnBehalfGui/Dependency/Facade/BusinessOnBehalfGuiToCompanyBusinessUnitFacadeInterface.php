@@ -12,11 +12,6 @@ use Generated\Shared\Transfer\CompanyBusinessUnitCriteriaFilterTransfer;
 
 interface BusinessOnBehalfGuiToCompanyBusinessUnitFacadeInterface
 {
-    /**
-     * @param \Generated\Shared\Transfer\CompanyBusinessUnitCriteriaFilterTransfer $companyBusinessUnitCriteriaFilterTransfer
-     *
-     * @return \Generated\Shared\Transfer\CompanyBusinessUnitCollectionTransfer
-     */
     public function getCompanyBusinessUnitCollection(
         CompanyBusinessUnitCriteriaFilterTransfer $companyBusinessUnitCriteriaFilterTransfer
     ): CompanyBusinessUnitCollectionTransfer;

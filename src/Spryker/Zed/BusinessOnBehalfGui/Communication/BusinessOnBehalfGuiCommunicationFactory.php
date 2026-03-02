@@ -27,9 +27,6 @@ use Symfony\Component\Form\FormInterface;
  */
 class BusinessOnBehalfGuiCommunicationFactory extends AbstractCommunicationFactory
 {
-    /**
-     * @return \Spryker\Zed\BusinessOnBehalfGui\Communication\Form\DataProvider\CustomerBusinessUnitAttachFormDataProvider
-     */
     public function createCustomerCompanyAttachFormDataProvider(): CustomerBusinessUnitAttachFormDataProvider
     {
         return new CustomerBusinessUnitAttachFormDataProvider(
@@ -39,44 +36,26 @@ class BusinessOnBehalfGuiCommunicationFactory extends AbstractCommunicationFacto
         );
     }
 
-    /**
-     * @return \Spryker\Zed\BusinessOnBehalfGui\Dependency\Facade\BusinessOnBehalfGuiToCompanyFacadeInterface
-     */
     public function getCompanyFacade(): BusinessOnBehalfGuiToCompanyFacadeInterface
     {
         return $this->getProvidedDependency(BusinessOnBehalfGuiDependencyProvider::FACADE_COMPANY);
     }
 
-    /**
-     * @return \Spryker\Zed\BusinessOnBehalfGui\Dependency\Facade\BusinessOnBehalfGuiToCustomerFacadeInterface
-     */
     public function getCustomerFacade(): BusinessOnBehalfGuiToCustomerFacadeInterface
     {
         return $this->getProvidedDependency(BusinessOnBehalfGuiDependencyProvider::FACADE_CUSTOMER);
     }
 
-    /**
-     * @return \Spryker\Zed\BusinessOnBehalfGui\Dependency\Facade\BusinessOnBehalfGuiToCompanyUserFacadeInterface
-     */
     public function getCompanyUserFacade(): BusinessOnBehalfGuiToCompanyUserFacadeInterface
     {
         return $this->getProvidedDependency(BusinessOnBehalfGuiDependencyProvider::FACADE_COMPANY_USER);
     }
 
-    /**
-     * @return \Spryker\Zed\BusinessOnBehalfGui\Dependency\Facade\BusinessOnBehalfGuiToCompanyBusinessUnitFacadeInterface
-     */
     public function getCompanyBusinessUnitFacade(): BusinessOnBehalfGuiToCompanyBusinessUnitFacadeInterface
     {
         return $this->getProvidedDependency(BusinessOnBehalfGuiDependencyProvider::FACADE_COMPANY_BUSINESS_UNIT);
     }
 
-    /**
-     * @param int $idCustomer
-     * @param int $idCompany
-     *
-     * @return \Symfony\Component\Form\FormInterface
-     */
     public function getCustomerBusinessUnitAttachForm(int $idCustomer, int $idCompany): FormInterface
     {
         $dataProvider = $this->createCustomerCompanyAttachFormDataProvider();
@@ -98,17 +77,11 @@ class BusinessOnBehalfGuiCommunicationFactory extends AbstractCommunicationFacto
         );
     }
 
-    /**
-     * @return \Spryker\Zed\BusinessOnBehalfGui\Communication\ButtonCreator\CompanyUserTableButtonCreatorInterface
-     */
     public function createCompanyUserTableButtonCreator(): CompanyUserTableButtonCreatorInterface
     {
         return new CompanyUserTableButtonCreator();
     }
 
-    /**
-     * @return \Spryker\Zed\BusinessOnBehalfGui\Communication\ButtonCreator\CustomerTableButtonCreatorInterface
-     */
     public function createCustomerTableButtonCreator(): CustomerTableButtonCreatorInterface
     {
         return new CustomerTableButtonCreator(
@@ -116,9 +89,6 @@ class BusinessOnBehalfGuiCommunicationFactory extends AbstractCommunicationFacto
         );
     }
 
-    /**
-     * @return \Symfony\Component\Form\FormInterface
-     */
     public function createDeleteCompanyUserForm(): FormInterface
     {
         return $this->getFormFactory()->create(DeleteCompanyUserForm::class);

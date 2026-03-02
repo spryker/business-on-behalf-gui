@@ -64,11 +64,6 @@ class DeleteCompanyUserController extends AbstractController
         ]);
     }
 
-    /**
-     * @param \Symfony\Component\HttpFoundation\Request $request
-     *
-     * @return \Symfony\Component\HttpFoundation\RedirectResponse
-     */
     public function deleteAction(Request $request): RedirectResponse
     {
         $deleteForm = $this->getFactory()->createDeleteCompanyUserForm()->handleRequest($request);

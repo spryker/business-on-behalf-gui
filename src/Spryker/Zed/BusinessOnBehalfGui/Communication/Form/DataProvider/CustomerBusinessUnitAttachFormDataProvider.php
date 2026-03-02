@@ -32,11 +32,6 @@ class CustomerBusinessUnitAttachFormDataProvider
      */
     protected $customerFacade;
 
-    /**
-     * @param \Spryker\Zed\BusinessOnBehalfGui\Dependency\Facade\BusinessOnBehalfGuiToCompanyBusinessUnitFacadeInterface $companyBusinessUnitFacade
-     * @param \Spryker\Zed\BusinessOnBehalfGui\Dependency\Facade\BusinessOnBehalfGuiToCompanyFacadeInterface $companyFacade
-     * @param \Spryker\Zed\BusinessOnBehalfGui\Dependency\Facade\BusinessOnBehalfGuiToCustomerFacadeInterface $customerFacade
-     */
     public function __construct(
         BusinessOnBehalfGuiToCompanyBusinessUnitFacadeInterface $companyBusinessUnitFacade,
         BusinessOnBehalfGuiToCompanyFacadeInterface $companyFacade,
@@ -47,12 +42,6 @@ class CustomerBusinessUnitAttachFormDataProvider
         $this->customerFacade = $customerFacade;
     }
 
-    /**
-     * @param int $idCustomer
-     * @param int $idCompany
-     *
-     * @return \Generated\Shared\Transfer\CompanyUserTransfer
-     */
     public function getData(int $idCustomer, int $idCompany): CompanyUserTransfer
     {
         $companyUserTransfer = new CompanyUserTransfer();
@@ -108,11 +97,6 @@ class CustomerBusinessUnitAttachFormDataProvider
         return $companyBusinessUnitChoicesValues;
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\CompanyBusinessUnitTransfer $companyBusinessUnitTransfer
-     *
-     * @return string
-     */
     protected function generateCompanyBusinessUnitName(CompanyBusinessUnitTransfer $companyBusinessUnitTransfer): string
     {
         return sprintf(
